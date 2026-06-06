@@ -15,6 +15,11 @@ function resetCalculator(){
 
     document.getElementById("progressBar").style.width = "0%";
 }
+document.addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        calculateAttendance();
+    }
+});
 
 function calculateAttendance() {
 
