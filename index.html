@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Calculator & Bunk Planner | Free Online Tool</title>
+
+    <meta name="description"
+          content="Free Attendance Calculator. Calculate your attendance percentage, find how many classes you can bunk, and how many classes you need to attend.">
+
+    <meta name="keywords"
+          content="attendance calculator, attendance percentage calculator, bunk calculator">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="container">
+
+            <button id="themeToggle">🌙 Dark Mode</button>
+
+            <h1>Attendance Calculator & Bunk Planner</h1>
+
+            <input type="number" id="total" placeholder="Total Classes Held">
+
+            <input type="number" id="attended" placeholder="Classes Attended">
+
+            <label for="required">🎯 Target Attendance</label>
+
+            <div class="slider-display">
+                <span id="sliderValue">75%</span>
+            </div>
+
+            <input
+                type="range"
+                id="required"
+                min="50"
+                max="100"
+                value="75"
+                oninput="updateSliderValue()">
+
+           <div class="button-group">
+    <button onclick="calculateAttendance()">Calculate</button>
+    <button onclick="resetCalculator()">Reset</button>
+</div>
+
+
+            <div class="result-card" id="result"></div>
+
+            <div class="progress-box">
+                <div id="progressBar"></div>
+            </div>
+
+        </div>
+
+        <section>
+            <h2>How to Use the Attendance Calculator</h2>
+
+            <p>
+                Enter total classes held and classes attended.
+                Move the slider to choose your target attendance percentage.
+                Click Calculate to see your attendance status.
+            </p>
+
+            <h2>Attendance Formula</h2>
+
+            <div class="formula">
+                Attendance Percentage = (Classes Attended / Total Classes) × 100
+            </div>
+
+            <h2>What is a Bunk Calculator?</h2>
+
+            <p>
+                A bunk calculator helps students determine how many classes they can miss
+                while maintaining their target attendance percentage.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Attendance Calculator. All Rights Reserved.</p>
+       
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
